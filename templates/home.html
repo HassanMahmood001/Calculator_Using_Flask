@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body style="background-image: url(/static/1.jpg);background-size:400px;">
+    <div style="display: flex;
+    
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+	padding-top: 8%;
+    text-align: center;">
+
+        <div style="
+        margin-top: 0%;
+    width: 400px; height: 500px;
+    background-color:gray;
+    border-style: solid;
+    border-color: blueviolet;
+    border-radius: 25px;
+    opacity: 0.9">
+            <div style="height: 30%;border-radius: 25px;background-image: url(/static/2.gif); background-color: aqua;">
+                <br><br>
+                <h1 style="color:white; margin-top: 0%; text-align: center;">CALCULATOR</h1>
+                <h3 style="color: white">Made by Hassan</h3>
+            </div>
+
+
+            <form style="padding-top: 50px;" action={{ url_for('result') }} method="post">
+                <div>
+                    <label for="opr"><b>Operation:</b> </label>
+                    <input style="width: 40%; border-style: solid;border-color:black;" type="text" id="email" name="opr"
+                        placeholder="{{c}}">
+                </div>
+                <br><br>
+                <div style="padding-left: 3px;">
+                    <label for="num_1"><b>Number1:</b></label>
+
+                    <input style="width: 40%;border-style: solid;border-color:black;" type="number" name="num_1"
+                        placeholder={{a}}>
+                </div>
+
+                <br><br>
+                <div style="padding-left: 3px;">
+                    <label for="num_2"><b>Number2:</b></label>
+
+                    <input style="width: 40%;border-style: solid;border-color:black;" type="number" name="num_2"
+                        placeholder={{b}}>
+                </div>
+
+                <br><br>
+                <div style="padding-left: 40%;">
+                    <button
+                        style="border-radius: 25px;border-style: solid;border-color: black;width: 70px;height: 30px; background-color: green;"
+                        type="submit" value="Submit"><b>Submit</b></button>
+
+                </div>
+
+                <br><br>
+            </form>
+            <form>
+
+                <div style="padding-left: 20px;">
+
+                    <label for="result"><b> Result:</b></label>
+                    <input style="width: 40%;border-style: solid;border-color:black;" type="text" name="result"
+                        placeholder={{ entry }}>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</body>
+
+</html>
