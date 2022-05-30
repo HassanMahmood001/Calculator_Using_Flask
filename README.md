@@ -1,5 +1,5 @@
 # Calculator_Using_Flask
-
+This is a GUI based calculator made using Flask.
 
 ## Requirement
 * Python 3.x \
